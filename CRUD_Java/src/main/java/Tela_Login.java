@@ -31,11 +31,13 @@ public class Tela_Login extends javax.swing.JFrame {
         Txt_Login = new javax.swing.JTextField();
         Lbl_Senha = new javax.swing.JLabel();
         Txt_Senha = new javax.swing.JPasswordField();
+        Btn_Validar = new javax.swing.JButton();
+        Btn_Limpar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         Lbl_Login.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        Lbl_Login.setText("Login");
+        Lbl_Login.setText("Login:");
         Lbl_Login.setName(""); // NOI18N
 
         Txt_Login.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
@@ -47,7 +49,7 @@ public class Tela_Login extends javax.swing.JFrame {
         });
 
         Lbl_Senha.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
-        Lbl_Senha.setText("Senha");
+        Lbl_Senha.setText("Senha:");
         Lbl_Senha.setName("Lbl_Senha"); // NOI18N
 
         Txt_Senha.setName(""); // NOI18N
@@ -57,38 +59,59 @@ public class Tela_Login extends javax.swing.JFrame {
             }
         });
 
+        Btn_Validar.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        Btn_Validar.setText("Validar");
+        Btn_Validar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                Btn_ValidarActionPerformed(evt);
+            }
+        });
+
+        Btn_Limpar.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        Btn_Limpar.setText("Limpar");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Lbl_Senha)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(Txt_Senha))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(Lbl_Login)
+                .addGap(90, 90, 90)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(Lbl_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(Txt_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(327, Short.MAX_VALUE))
+                        .addComponent(Txt_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(Btn_Validar)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(Btn_Limpar))
+                        .addGroup(layout.createSequentialGroup()
+                            .addComponent(Lbl_Senha, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                            .addComponent(Txt_Senha, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(88, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Lbl_Login)
-                    .addComponent(Txt_Login, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(28, 28, 28)
+                    .addComponent(Lbl_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Txt_Login, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Lbl_Senha)
-                    .addComponent(Txt_Senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(414, Short.MAX_VALUE))
+                    .addComponent(Txt_Senha, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Lbl_Senha, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(87, 87, 87)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(Btn_Validar)
+                    .addComponent(Btn_Limpar))
+                .addContainerGap(48, Short.MAX_VALUE))
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void Txt_LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Txt_LoginActionPerformed
@@ -98,6 +121,10 @@ public class Tela_Login extends javax.swing.JFrame {
     private void Txt_SenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Txt_SenhaActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_Txt_SenhaActionPerformed
+
+    private void Btn_ValidarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Btn_ValidarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_Btn_ValidarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -125,6 +152,8 @@ public class Tela_Login extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton Btn_Limpar;
+    private javax.swing.JButton Btn_Validar;
     private javax.swing.JLabel Lbl_Login;
     private javax.swing.JLabel Lbl_Senha;
     private javax.swing.JTextField Txt_Login;
