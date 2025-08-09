@@ -29,13 +29,13 @@ public class Tela_Insecao_Novos_Usuarios extends javax.swing.JFrame {
 
         buttonGroup1 = new javax.swing.ButtonGroup();
         Lbl_Username = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        Txt_Username = new javax.swing.JTextField();
         Lbl_Senha = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jLabel3 = new javax.swing.JLabel();
-        jRadioButton2 = new javax.swing.JRadioButton();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        Txt_Senha = new javax.swing.JPasswordField();
+        Rd_Usuario_Comum = new javax.swing.JRadioButton();
+        Lbl_Tipo = new javax.swing.JLabel();
+        Rd_Administrador = new javax.swing.JRadioButton();
+        Cmb_Selecao = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -45,21 +45,21 @@ public class Tela_Insecao_Novos_Usuarios extends javax.swing.JFrame {
         Lbl_Senha.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         Lbl_Senha.setText("Senha");
 
-        buttonGroup1.add(jRadioButton1);
-        jRadioButton1.setText("Usuário Comum");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        buttonGroup1.add(Rd_Usuario_Comum);
+        Rd_Usuario_Comum.setText("Usuário Comum");
+        Rd_Usuario_Comum.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                Rd_Usuario_ComumActionPerformed(evt);
             }
         });
 
-        jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel3.setText("Tipo:");
+        Lbl_Tipo.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        Lbl_Tipo.setText("Tipo:");
 
-        buttonGroup1.add(jRadioButton2);
-        jRadioButton2.setText("Administrador");
+        buttonGroup1.add(Rd_Administrador);
+        Rd_Administrador.setText("Administrador");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Usuário Comum", "Administrador", " " }));
+        Cmb_Selecao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Usuário Comum", "Administrador", " " }));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -69,23 +69,21 @@ public class Tela_Insecao_Novos_Usuarios extends javax.swing.JFrame {
                 .addGap(46, 46, 46)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jRadioButton2)
-                                .addGap(22, 22, 22))
-                            .addComponent(jRadioButton1, javax.swing.GroupLayout.Alignment.TRAILING)))
-                    .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(Lbl_Username)
                             .addComponent(Lbl_Senha))
                         .addGap(30, 30, 30)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
-                            .addComponent(jTextField1))))
+                            .addComponent(Txt_Senha, javax.swing.GroupLayout.DEFAULT_SIZE, 100, Short.MAX_VALUE)
+                            .addComponent(Txt_Username)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(Lbl_Tipo)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(Rd_Administrador)
+                            .addComponent(Rd_Usuario_Comum))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Cmb_Selecao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(21, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -94,23 +92,23 @@ public class Tela_Insecao_Novos_Usuarios extends javax.swing.JFrame {
                 .addGap(31, 31, 31)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Lbl_Username)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Txt_Username, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(28, 28, 28)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(Lbl_Senha)
-                    .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Txt_Senha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addGap(46, 46, 46)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel3)
-                            .addComponent(jRadioButton1))
+                            .addComponent(Lbl_Tipo)
+                            .addComponent(Rd_Usuario_Comum))
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton2)
+                        .addComponent(Rd_Administrador)
                         .addContainerGap(62, Short.MAX_VALUE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Cmb_Selecao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(82, 82, 82))))
         );
 
@@ -118,9 +116,9 @@ public class Tela_Insecao_Novos_Usuarios extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void Rd_Usuario_ComumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Rd_Usuario_ComumActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_Rd_Usuario_ComumActionPerformed
 
     /**
      * @param args the command line arguments
@@ -148,14 +146,14 @@ public class Tela_Insecao_Novos_Usuarios extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> Cmb_Selecao;
     private javax.swing.JLabel Lbl_Senha;
+    private javax.swing.JLabel Lbl_Tipo;
     private javax.swing.JLabel Lbl_Username;
+    private javax.swing.JRadioButton Rd_Administrador;
+    private javax.swing.JRadioButton Rd_Usuario_Comum;
+    private javax.swing.JPasswordField Txt_Senha;
+    private javax.swing.JTextField Txt_Username;
     private javax.swing.ButtonGroup buttonGroup1;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
